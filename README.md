@@ -1,16 +1,20 @@
-# imroatulkonita_uas
+# CineBook - Movie & Book Directory 📚🎬
 
-A new Flutter project.
+CineBook adalah aplikasi direktori digital yang dirancang untuk mengelola dan menjelajahi Mobile Katalog Film serta Buku dalam satu platform yang dibangun menggunakan **flutter**. proyek ini merupakan pemenuhan tugas UAS dengan fokus dengan antarmuka yang elegan dan fungsional pencarian dinamis.
 
-## Getting Started
+Aplikasi ini tidak hanya fokus pada fungsionalitas, tetapi juga pada pengalaman pengguna (UX) dengan menerapkan desain minimalis dan responsif.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## Daftar Fitur Saat Ini
+1. **Dual Directory :** Memisahkan katalog Film dan Buku melalui navigasi Tab.
+2. **Real-time Search :** Memungkinkan pengguna mencari judul secara langsung.
+3. **Detail View :** Menampilkan poster besar, Judul, dan deskripsi lengkap.
+4. **Dark Mode UI :** Tampilan modern dan nyaman di mata (Material).
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Cara Menjalankan Proyek
+1. Pastikan Flutter SDK sudah terinstal.
+2. Jalankan 'flutter pub get'.
+3. Gunakan perintah 'flutter run' untuk menjalankan di emulator/perangkat asli.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
