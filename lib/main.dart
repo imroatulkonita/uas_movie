@@ -84,6 +84,7 @@ State<MainNavigation> {
             ContentGrid(type: "Book", query: searchQuery),
           ],
         ),
+        
       ),
     );
   }
@@ -162,8 +163,10 @@ class ContentGrid extends StatelessWidget {
                       width: double.infinity,
                       ),
                     ),
+                   
+                    const SizedBox(height: 8),
                     Padding(
-                      padding: const EdgeInsets.all(10),
+                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                       child: Text(
                         filteredData[index] ['title'] !,
                         style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
