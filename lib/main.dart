@@ -99,25 +99,25 @@ class ContentGrid extends StatelessWidget {
   final List<Map<String, String>> data = const [
     {
       'title': 'The Batman',
-      'image': '',
+      'image': 'https://prodimage.images-bn.com/pimages/0883929728367_p0_v2_s600x595.jpg',
       'desc': 'Batman venture into Gotham City\'s underworld when a sadistic killer leaves behind a trail of cryptic clues.',
       'category': 'Movie'
     },
     {
       'title': 'Dune: Part Two',
-      'image': '',
+      'image': 'https://www.joblo.com/wp-content/uploads/2023/08/dune_part_two_empire_cover-791x1024.jpg',
       'desc': 'Paul Atreides unites with Chani and the Fremen while on a warpath of revenge against the conspirators.',
       'category': 'Movie'
     },
     {
       'title': 'Atomic Habits',
-      'image': '',
+      'image': 'https://image.gramedia.net/rs:fit:0:0/plain/https://cdn.gramedia.com/uploads/products/-omxcm6-m8.jpg',
       'desc': 'An easy & proven way to build good habits and break bad ones by james clear.',
       'category': 'Book'
     },
     {
       'title': 'Harry Potter',
-      'image': '',
+      'image': 'https://static.republika.co.id/uploads/images/inline/sorcerers-stone-kazu-cover-full.jpg',
       'desc': 'A young wizard discovers his madical heritage on his eleventh birthday.',
       'category': 'Book'
     },
