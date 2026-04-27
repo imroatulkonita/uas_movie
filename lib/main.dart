@@ -139,3 +139,38 @@ class ContentGrid extends StatelessWidget {
     );
   }
 }
+
+// --- HALAMAN DETAIL ---
+class DetailPage extends StatelessWidget {
+  final Map<String, String> item;
+  const DetailPage({super.key, required this.item});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text(item['title']!)),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Image.network(item['image']!, width: double.infinity, height: 400, fit: BoxFit.cover),
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(item['title']!, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.amber)),
+                  const SizedBox(height: 10),
+                  Text(item['category']!, style: const TextStyle(fontSize: 16, color: Colors.grey)),
+                  const SizedBox(height: 20),
+                  const Text("Description:", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                  const SizedBox(height: 8),
+                  Text(item['desc']!, style: const TextStyle(fontSize: 16, height: 1.5)),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
