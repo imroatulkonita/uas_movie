@@ -91,7 +91,8 @@ State<MainNavigation> {
 // --- GRID TAMPILAN KONTEN ---
 class ContentGrid extends StatelessWidget {
   final String type;
-  const ContentGrid({super.key, required this.type});
+  final String query;
+  const ContentGrid({super.key, required this.type, required this.query});
 
   // Data Dummy untuk Movie & Book
   final List<Map<String, String>> data = const [
@@ -123,8 +124,11 @@ class ContentGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Filter data berdasarkan tipe (Movie atau Book)
-    final filteredData = data.where((item) => item['category'] == type).toList();
+    // FILTER BERDASARKAN TIPE DAN SEARCH QUERY
+    final filteredData = data.where((item) {
+    return item['category'] == type && item['title']!.toLowerCase().contains(query);
+    }).toList();
+
     return GridView.builder(
       padding: const EdgeInsets.all(15),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
