@@ -27,6 +27,15 @@ class  MainNavigation  extends StatelessWidget {
   const MainNavigation({super.key});
 
   @override
+  State<MainNavigation> createState() => _MainNavigationState();
+}
+
+class _MainNavigationState extends
+State<MainNavigation> {
+  String searchQuery = "";
+
+
+  @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 2, 
@@ -34,14 +43,40 @@ class  MainNavigation  extends StatelessWidget {
         appBar: AppBar(
           title: const Text('CineBook 📚🎬', style: TextStyle(fontWeight: FontWeight.bold)),
           centerTitle: true,
-          bottom: const TabBar(
+          // FITUR SEARCH DI APPBAR
+          bottom : PreferredSize(
+            preferredSize: const Size.fromHeight(110), 
+            child: Column(
+              children: [
+                Padding(padding: const EdgeInsets.symmetric(horizontal: 15,
+                vertical: 5),
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: "Cari film atau buku...",
+                    prefixIcon: const Icon(Icons.search),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
+                    contentPadding: const EdgeInsets.all(10),
+                    fillColor: Colors.white10,
+                    filled: true,
+                  ),
+                  onChanged: (value) {
+                    setState(() {
+                      searchQuery = value.toLowerCase();
+                    });
+                  },
+                ),
+              ),
+              const TabBar(
             tabs: [
               Tab(icon: Icon(Icons.movie), text: "Movies"),
               Tab(icon: Icon(Icons.book), text: "Books"),
-            ],
+              ],
             indicatorColor: Colors.amber,
-          ),
+            ),
+          ],
         ),
+      ),
+    ),
         body: const TabBarView(
           children: [
             ContentGrid(type: "Movie"),
