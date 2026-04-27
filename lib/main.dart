@@ -112,13 +112,13 @@ class ContentGrid extends StatelessWidget {
     },
     {
       'title': 'Atomic Habits',
-      'image': 'https://prh.imgix.net/extra-media/9781529981230_1__1200x1200.jpg',
+      'image': 'https://m.media-amazon.com/images/I/81YkqyaFVEL._AC_UF1000,1000_QL80_.jpg',
       'desc': 'An easy & proven way to build good habits and break bad ones by james clear.',
       'category': 'Book'
     },
     {
       'title': 'Harry Potter',
-      'image': 'https://static.republika.co.id/uploads/images/inline/sorcerers-stone-kazu-cover-full.jpg',
+      'image': 'https://m.media-amazon.com/images/I/81iqZ2HHD-L._AC_UF1000,1000_QL80_.jpg',
       'desc': 'A young wizard discovers his madical heritage on his eleventh birthday.',
       'category': 'Book'
     },
