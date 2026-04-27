@@ -85,5 +85,57 @@ class ContentGrid extends StatelessWidget {
       'category': 'Book'
     },
   ];
-  
+
+  @override
+  Widget build(BuildContext context) {
+    // Filter data berdasarkan tipe (Movie atau Book)
+    final filteredData = data.where((item) => item['category'] == type).toList();
+    return GridView.builder(
+      padding: const EdgeInsets.all(15),
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        crossAxisSpacing: 15,
+        mainAxisSpacing: 15,
+        childAspectRatio: 0.6,
+        ),
+        itemCount: filteredData.length,
+        itemBuilder: (context, index) {
+          return GestureDetector(
+            onTap: (){
+              Navigator.push(
+                context, MaterialPageRoute(
+                  builder: (context) => DetailPage(item: filteredData[index]),
+                  ),
+                );
+            },
+            child: Card(
+              elevation: 5,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+              clipBehavior: Clip.antiAlias,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    child: Image.network(
+                      filteredData[index] ['image'] !,
+                      fit: BoxFit.cover,
+                      width: double.infinity,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Text(
+                        filteredData[index] ['title'] !,
+                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  ],
+               ),
+            ),
+         );
+       },
+    );
+  }
 }
