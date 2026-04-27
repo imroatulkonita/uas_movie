@@ -23,7 +23,7 @@ class CineBookApp extends StatelessWidget {
 } 
 
 // --- NAVIGATION UTAMA (TAB BAR) ---
-class  MainNavigation  extends StatelessWidget {
+class  MainNavigation  extends StatefulWidget {
   const MainNavigation({super.key});
 
   @override
@@ -77,10 +77,11 @@ State<MainNavigation> {
         ),
       ),
     ),
-        body: const TabBarView(
+        body: TabBarView(
           children: [
-            ContentGrid(type: "Movie"),
-            ContentGrid(type: "Book"),
+        
+            ContentGrid(type: "Movie", query: searchQuery),
+            ContentGrid(type: "Book", query: searchQuery),
           ],
         ),
       ),
