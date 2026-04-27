@@ -53,3 +53,37 @@ class  MainNavigation  extends StatelessWidget {
   }
 }
 
+// --- GRID TAMPILAN KONTEN ---
+class ContentGrid extends StatelessWidget {
+  final String type;
+  const ContentGrid({super.key, required this.type});
+
+  // Data Dummy untuk Movie & Book
+  final List<Map<String, String>> data = const [
+    {
+      'title': 'The Batman',
+      'image': '',
+      'desc': 'Batman venture into Gotham City\'s underworld when a sadistic killer leaves behind a trail of cryptic clues.',
+      'category': 'Movie'
+    },
+    {
+      'title': 'Dune: Part Two',
+      'image': '',
+      'desc': 'Paul Atreides unites with Chani and the Fremen while on a warpath of revenge against the conspirators.',
+      'category': 'Movie'
+    },
+    {
+      'title': 'Atomic Habits',
+      'image': '',
+      'desc': 'An easy & proven way to build good habits and break bad ones by james clear.',
+      'category': 'Book'
+    },
+    {
+      'title': 'Harry Potter',
+      'image': '',
+      'desc': 'A young wizard discovers his madical heritage on his eleventh birthday.',
+      'category': 'Book'
+    },
+  ];
+  
+}
