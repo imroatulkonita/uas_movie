@@ -30,7 +30,12 @@ bool isFav(String title) => _favTitles.contains(title);
 }
 
 void main() {
-  runApp(const CineBookApp());
+  runApp(
+    ChangeNotifierProvider(
+     create: (context) => FavoriteProvider(),
+     child: const CineBookApp(),
+     ),
+  );
 }
 
 class CineBookApp extends StatelessWidget {
@@ -51,7 +56,83 @@ class CineBookApp extends StatelessWidget {
   }
 } 
 
-// --- NAVIGATION UTAMA (TAB BAR) ---
+const List<Map<String, Sting>> allData = [
+  // --- KATALOG FILM ---
+  {
+    'title' : 'The Batman',
+    'image' : '',
+    'desc' : 'Batman venture inti Gotham City\'s underworld when a sadistic killer leaves behind cryptic clues.',
+    'category' : 'Movie',
+    'rating' : '⭐⭐⭐⭐⭐'
+  },
+  {
+    'title' : 'Dune: Part Two',
+    'image' : '',
+    'desc' : 'Paul atreides unites with Chani and the Fremen while on a warpath of revenge.',
+    'category' : 'Movie',
+    'rating' : '⭐⭐⭐⭐⭐'
+  },
+  {
+    'title' : 'The Batman',
+    'image' : '',
+    'desc' : 'Batman venture inti Gotham City\'s underworld when a sadistic killer leaves behind cryptic clues.',
+    'category' : 'Movie',
+    'rating' : '⭐⭐⭐⭐⭐'
+  },
+  {
+    'title' : 'The Batman',
+    'image' : '',
+    'desc' : 'Batman venture inti Gotham City\'s underworld when a sadistic killer leaves behind cryptic clues.',
+    'category' : 'Movie',
+    'rating' : '⭐⭐⭐⭐⭐'
+  },
+  {
+    'title' : 'The Batman',
+    'image' : '',
+    'desc' : 'Batman venture inti Gotham City\'s underworld when a sadistic killer leaves behind cryptic clues.',
+    'category' : 'Movie',
+    'rating' : '⭐⭐⭐⭐⭐'
+  },
+
+  // --- KATALOG BUKU ---
+  {
+    'title' : 'Atomic Habits',
+    'image' : '',
+    'desc' : 'An easy & proven way to build goog habits and break bad ones.',
+    'category' : 'Book',
+    'rating' : '⭐⭐⭐⭐⭐'
+  },
+  {
+    'title' : 'Atomic Habits',
+    'image' : '',
+    'desc' : 'An easy & proven way to build goog habits and break bad ones.',
+    'category' : 'Book',
+    'rating' : '⭐⭐⭐⭐⭐'
+  },
+  {
+    'title' : 'Atomic Habits',
+    'image' : '',
+    'desc' : 'An easy & proven way to build goog habits and break bad ones.',
+    'category' : 'Book',
+    'rating' : '⭐⭐⭐⭐⭐'
+  },
+  {
+    'title' : 'Atomic Habits',
+    'image' : '',
+    'desc' : 'An easy & proven way to build goog habits and break bad ones.',
+    'category' : 'Book',
+    'rating' : '⭐⭐⭐⭐⭐'
+  },
+  {
+    'title' : 'Atomic Habits',
+    'image' : '',
+    'desc' : 'An easy & proven way to build goog habits and break bad ones.',
+    'category' : 'Book',
+    'rating' : '⭐⭐⭐⭐⭐'
+  },
+];
+
+// --- NAVIGATION UTAMA & SEARCH (TAB BAR) ---
 class  MainNavigation  extends StatefulWidget {
   const MainNavigation({super.key});
 
@@ -71,34 +152,29 @@ State<MainNavigation> {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('CineBook 📚🎬', style: TextStyle(fontWeight: FontWeight.bold)),
-          centerTitle: true,
-          // FITUR SEARCH DI APPBAR
           bottom : PreferredSize(
             preferredSize: const Size.fromHeight(110), 
             child: Column(
               children: [
-                Padding(padding: const EdgeInsets.symmetric(horizontal: 15,
-                vertical: 5),
+                Padding(padding: const EdgeInsets.symmetric
+                (horizontal: 15),
                 child: TextField(
                   decoration: InputDecoration(
                     hintText: "Cari film atau buku...",
                     prefixIcon: const Icon(Icons.search),
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(30)),
-                    contentPadding: const EdgeInsets.all(10),
-                    fillColor: Colors.white10,
                     filled: true,
+                    fillColor: Colors.white10,
                   ),
-                  onChanged: (value) {
-                    setState(() {
-                      searchQuery = value.toLowerCase();
-                    });
-                  },
+                  onChanged: (v) => setState(() => 
+                  search = v.toLowerCase()),
                 ),
               ),
               const TabBar(
             tabs: [
               Tab(icon: Icon(Icons.movie), text: "Movies"),
               Tab(icon: Icon(Icons.book), text: "Books"),
+              Tab(icon: Icon(Icons.favorite), text: "Favs"),
               ],
             indicatorColor: Colors.amber,
             ),
@@ -109,8 +185,9 @@ State<MainNavigation> {
         body: TabBarView(
           children: [
         
-            ContentGrid(type: "Movie", query: searchQuery),
-            ContentGrid(type: "Book", query: searchQuery),
+            ContentGrid(type: "Movie", query: search),
+            ContentGrid(type: "Book", query: search),
+            const FavoriteScreen(),
           ],
         ),
         
@@ -125,41 +202,13 @@ class ContentGrid extends StatelessWidget {
   final String query;
   const ContentGrid({super.key, required this.type, required this.query});
 
-  // Data Dummy untuk Movie & Book
-  final List<Map<String, String>> data = const [
-    {
-      'title': 'The Batman',
-      'image': 'https://m.media-amazon.com/images/I/81PWWFp26HL.jpg',
-      'desc': 'Batman venture into Gotham City\'s underworld when a sadistic killer leaves behind a trail of cryptic clues.',
-      'category': 'Movie'
-    },
-    {
-      'title': 'Dune: Part Two',
-      'image': 'https://www.joblo.com/wp-content/uploads/2023/08/dune_part_two_empire_cover-791x1024.jpg',
-      'desc': 'Paul Atreides unites with Chani and the Fremen while on a warpath of revenge against the conspirators.',
-      'category': 'Movie'
-    },
-    {
-      'title': 'Atomic Habits',
-      'image': 'https://m.media-amazon.com/images/I/81YkqyaFVEL._AC_UF1000,1000_QL80_.jpg',
-      'desc': 'An easy & proven way to build good habits and break bad ones by james clear.',
-      'category': 'Book'
-    },
-    {
-      'title': 'Harry Potter',
-      'image': 'https://m.media-amazon.com/images/I/81iqZ2HHD-L._AC_UF1000,1000_QL80_.jpg',
-      'desc': 'A young wizard discovers his madical heritage on his eleventh birthday.',
-      'category': 'Book'
-    },
-  ];
 
   @override
   Widget build(BuildContext context) {
     // FILTER BERDASARKAN TIPE DAN SEARCH QUERY
-    final filteredData = data.where((item) {
-    return item['category'] == type && item['title']!.toLowerCase().contains(query);
-    }).toList();
-
+    final list = allData.where((i) => i['category'] == type 
+    && i['title'] !.toLowerCase().contains(query)).toList();
+    
     return GridView.builder(
       padding: const EdgeInsets.all(15),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -168,51 +217,38 @@ class ContentGrid extends StatelessWidget {
         mainAxisSpacing: 15,
         childAspectRatio: 0.6,
         ),
-        itemCount: filteredData.length,
+        itemCount: list.length,
         itemBuilder: (context, index) {
+          final item = list[index];
           return GestureDetector(
-            onTap: (){
+            onTap: () =>
               Navigator.push(
                 context, MaterialPageRoute(
-                  builder: (context) => DetailPage(item: filteredData[index]),
-                  ),
-                );
-            },
-            child: Card(
-              elevation: 5,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-              clipBehavior: Clip.antiAlias,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                  builder: (context) => DetailPage(item: item))),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(
-                    child: Image.network(
-                      filteredData[index] ['image'] !,
-                      fit: BoxFit.cover,
-                      width: double.infinity,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.all(15),
+                      child: Image.network(item('image')!, 
+                      fit: BoxFit.cover, 
+                      width: double.infinity),
                       ),
                     ),
                    
                     const SizedBox(height: 8),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                      child: Text(
-                        filteredData[index] ['title'] !,
-                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
-                  ],
-               ),
-            ),
-         );
-       },
-    );
+                    Text(item['rating']!, style: const TextStyle(fontSize: 10)),
+                    Text(item['title']!, style: const TextStyle(fontWeight: FontWeight.bold), maxLines: 1),
+                 ],
+              ),
+           );
+        },
+     );
   }
 }
 
-// --- HALAMAN DETAIL ---
+// --- HALAMAN DETAIL & FAVORITE BUTTOM ---
 class DetailPage extends StatelessWidget {
   final Map<String, String> item;
   const DetailPage({super.key, required this.item});
