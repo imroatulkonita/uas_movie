@@ -60,36 +60,36 @@ const List<Map<String, String>> allData = [
   // --- KATALOG FILM ---
   {
     'title' : 'The Batman',
-    'image' : '',
+    'image' : 'https://m.media-amazon.com/images/I/81PWWFp26HL.jpg',
     'desc' : 'Batman venture inti Gotham City\'s underworld when a sadistic killer leaves behind cryptic clues.',
     'category' : 'Movie',
     'rating' : '⭐⭐⭐⭐⭐'
   },
   {
     'title' : 'Dune: Part Two',
-    'image' : '',
+    'image' : 'https://www.joblo.com/wp-content/uploads/2023/08/dune_part_two_empire_cover-791x1024.jpg',
     'desc' : 'Paul atreides unites with Chani and the Fremen while on a warpath of revenge.',
     'category' : 'Movie',
     'rating' : '⭐⭐⭐⭐⭐'
   },
   {
-    'title' : 'The Batman',
+    'title' : 'Oppenheimer',
     'image' : '',
-    'desc' : 'Batman venture inti Gotham City\'s underworld when a sadistic killer leaves behind cryptic clues.',
+    'desc' : 'Robert Oppenheimer and is role in the development of the atomic bomb.',
     'category' : 'Movie',
     'rating' : '⭐⭐⭐⭐⭐'
   },
   {
-    'title' : 'The Batman',
-    'image' : '',
-    'desc' : 'Batman venture inti Gotham City\'s underworld when a sadistic killer leaves behind cryptic clues.',
+    'title' : 'Ayah, Ini Arahnya Kemana, ya?',
+    'image' : 'https://m.media-amazon.com/images/M/MV5BMWY2MGIxMjctMWVkMy00NmNkLWI1ZjktMDM2YmI5ZmFmOWQ1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
+    'desc' : 'Sebuah perjalanan emosional seorang anak yang mencari jawaban dan arah hidup melalui kenangan serta sosok ayahnya.',
     'category' : 'Movie',
     'rating' : '⭐⭐⭐⭐⭐'
   },
   {
-    'title' : 'The Batman',
-    'image' : '',
-    'desc' : 'Batman venture inti Gotham City\'s underworld when a sadistic killer leaves behind cryptic clues.',
+    'title' : 'Tunggu Aku Sukses Nanti',
+    'image' : 'https://nos.jkt-1.neo.id/media.cinema21.co.id/movie-images/16TASN.jpg',
+    'desc' : 'Perjuangan anak muda dalam meraih mimpi dan cinta, membuktikan bahwa sukses butuh proses dan kesabaran.',
     'category' : 'Movie',
     'rating' : '⭐⭐⭐⭐⭐'
   },
@@ -97,36 +97,36 @@ const List<Map<String, String>> allData = [
   // --- KATALOG BUKU ---
   {
     'title' : 'Atomic Habits',
-    'image' : '',
+    'image' : 'https://m.media-amazon.com/images/I/81YkqyaFVEL._AC_UF1000,1000_QL80_.jpg',
     'desc' : 'An easy & proven way to build goog habits and break bad ones.',
     'category' : 'Book',
     'rating' : '⭐⭐⭐⭐⭐'
   },
   {
-    'title' : 'Atomic Habits',
-    'image' : '',
-    'desc' : 'An easy & proven way to build goog habits and break bad ones.',
+    'title' : 'harry potter',
+    'image' : 'https://m.media-amazon.com/images/I/71-++hbbERL.jpg',
+    'desc' : 'A young wizard discovers his magical heritage on his eleventh birthday.',
     'category' : 'Book',
     'rating' : '⭐⭐⭐⭐⭐'
   },
   {
-    'title' : 'Atomic Habits',
-    'image' : '',
-    'desc' : 'An easy & proven way to build goog habits and break bad ones.',
+    'title' : 'Filosofi Teras',
+    'image' : 'https://mojokstore.com/wp-content/uploads/2021/09/Filosofi-Teras-Cover-Orange.jpeg',
+    'desc' : 'Belajar hidup tenang dengan stoisisme untuk mental yang lebih tangguh.',
     'category' : 'Book',
     'rating' : '⭐⭐⭐⭐⭐'
   },
   {
-    'title' : 'Atomic Habits',
-    'image' : '',
-    'desc' : 'An easy & proven way to build goog habits and break bad ones.',
+    'title' : 'The Alchemist',
+    'image' : 'https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1442866592i/9276509.jpg',
+    'desc' : 'Perjalanan seorang pemuda mengejar mimpinya ke piramida mesir.',
     'category' : 'Book',
     'rating' : '⭐⭐⭐⭐⭐'
   },
   {
-    'title' : 'Atomic Habits',
-    'image' : '',
-    'desc' : 'An easy & proven way to build goog habits and break bad ones.',
+    'title' : 'Rich Dad Poor Dad',
+    'image' : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCdyugC3G12f24SfC6wxeQINZEdsMIHMmj_g&s',
+    'desc' : 'What tje rich teach their kids about money that the poor and niddle class do not!.',
     'category' : 'Book',
     'rating' : '⭐⭐⭐⭐⭐'
   },
