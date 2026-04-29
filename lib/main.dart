@@ -230,8 +230,8 @@ class ContentGrid extends StatelessWidget {
                 children: [
                   Expanded(
                     child: ClipRRect(
-                      borderRadius: BorderRadius.all(15),
-                      child: Image.network(item('image')!, 
+                      borderRadius: BorderRadius.circular(15),
+                      child: Image.network(item['image']!, 
                       fit: BoxFit.cover, 
                       width: double.infinity),
                       ),
