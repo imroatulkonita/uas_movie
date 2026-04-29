@@ -1,4 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+// --- STATE MANAGEMENT (PROVIDER) ---
+class FavoriteProvider extends ChangeNotifier {
+  List<String> _favTitles = [];
+  List<String> get favTitles => _favTitles;
+
+  FavoriteProvider() { _loadFromPrefs(); }
+
+  void _loadFromPrefs() async {
+    final prefs = await SharedPreferences.getInstance();
+    _favTitles = prefs.getStringList('cinebook_favs') ?? [];
+    notifyListeners();
+  }
+
+void toggleFavorite(String title) async {
+  if (_favTitles.contains(title)) {
+    _favTitles.remove(title);
+  } else {
+    _favTitles.add(title);
+  }
+  notifyListeners();
+  final prefs = await SharedPreferences.getInstance();
+  prefs.setStringList('cinebook_favs', _favTitles);
+}
+
+bool isFav(String title) => _favTitles.contains(title);
+}
 
 void main() {
   runApp(const CineBookApp());

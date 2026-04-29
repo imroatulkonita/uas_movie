@@ -3,7 +3,7 @@
 CineBook adalah aplikasi direktori digital yang dirancang untuk mengelola dan menjelajahi Mobile Katalog Film serta Buku dalam satu platform yang dibangun menggunakan **flutter**. proyek ini merupakan pemenuhan tugas UAS dengan fokus dengan antarmuka yang elegan dan fungsional pencarian dinamis.
 
 Aplikasi ini tidak hanya fokus pada fungsionalitas, tetapi juga pada pengalaman pengguna (UX) dengan menerapkan desain minimalis dan responsif.
-
+ 
 ---
 
 ## Daftar Fitur Saat Ini
