@@ -255,12 +255,22 @@ class DetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final prov = Provider.of<FavoriteProvider>(context);
+    bool isFav = prov.isFav(item['title']!);
+
     return Scaffold(
-      appBar: AppBar(title: Text(item['title']!)),
-      body: SingleChildScrollView(
-        child: Column(
+      appBar: AppBar(
+        actions: [
+          IconButton(
+            icon: Icon(isFav ? Icons.favorite : Icons.favorite_border,
+            color: isFav ? Colors.red: null),
+          onPressed: () => prov.toggleFavorite (item['title']!),
+          )
+        ],
+      ),
+      body: Column(
           children: [
-            Image.network(item['image']!, width: double.infinity, height: 400, fit: BoxFit.cover),
+            Image.network(item['image']!, height: 350, width: double.infinity, fit: BoxFit.cover),
             Padding(
               padding: const EdgeInsets.all(20),
               child: Column(
@@ -275,10 +285,36 @@ class DetailPage extends StatelessWidget {
                   Text(item['desc']!, style: const TextStyle(fontSize: 16, height: 1.5)),
                 ],
               ),
-            ),
+            )
           ],
         ),
-      ),
+    );
+  }
+}
+
+// --- FAVORITE LISH SCREEN ---
+class FavoriteScreen extends StatelessWidget {
+  const FavoriteScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final prov = Provider.of<FavoriteProvider>(context);
+    final favList = allData.where((i) => prov.favTitles.contains(i['title'])).toList();
+
+    if (favList.isEmpty) return const Center(child: Text("Belum ada favorit ❤️"));
+
+    return ListView.builder(
+      itemCount: favList.length,
+      itemBuilder: (context, index) {
+        final item = favList[index];
+        return ListTile(
+          leading: Image.network(item['image']!, width: 50),
+          title: Text(item['title']!),
+          subtitle: Text(item['category']!),
+          onTap: () => Navigator.push(
+            context, MaterialPageRoute(builder: (c) => DetailPage(item: item))),
+        );
+      },
     );
   }
 }
