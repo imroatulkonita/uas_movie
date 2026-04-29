@@ -74,7 +74,7 @@ const List<Map<String, String>> allData = [
   },
   {
     'title' : 'Oppenheimer',
-    'image' : '',
+    'image' : 'https://www.tallengestore.com/cdn/shop/products/Oppenheimer-CillianMurphy-ChristopherNolan-HollywoodMoviePoster.jpg?v=1691369029',
     'desc' : 'Robert Oppenheimer and is role in the development of the atomic bomb.',
     'category' : 'Movie',
     'rating' : '⭐⭐⭐⭐⭐'
@@ -88,7 +88,7 @@ const List<Map<String, String>> allData = [
   },
   {
     'title' : 'Tunggu Aku Sukses Nanti',
-    'image' : 'https://nos.jkt-1.neo.id/media.cinema21.co.id/movie-images/16TASN.jpg',
+    'image' : 'https://pbs.twimg.com/media/G9anVVJaYAMX4wV.jpg',
     'desc' : 'Perjuangan anak muda dalam meraih mimpi dan cinta, membuktikan bahwa sukses butuh proses dan kesabaran.',
     'category' : 'Movie',
     'rating' : '⭐⭐⭐⭐⭐'
@@ -110,9 +110,9 @@ const List<Map<String, String>> allData = [
     'rating' : '⭐⭐⭐⭐⭐'
   },
   {
-    'title' : 'Filosofi Teras',
-    'image' : 'https://mojokstore.com/wp-content/uploads/2021/09/Filosofi-Teras-Cover-Orange.jpeg',
-    'desc' : 'Belajar hidup tenang dengan stoisisme untuk mental yang lebih tangguh.',
+    'title' : 'The Midnight Library',
+    'image' : 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1609973366i/56578056.jpg',
+    'desc' : 'Di antara hidup dan mati ada sebuah perpustakaan yang berisi semua kemungkinan hidup yang bisa kita jalani.',
     'category' : 'Book',
     'rating' : '⭐⭐⭐⭐⭐'
   },
