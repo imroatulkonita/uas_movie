@@ -56,7 +56,7 @@ class CineBookApp extends StatelessWidget {
   }
 } 
 
-const List<Map<String, Sting>> allData = [
+const List<Map<String, String>> allData = [
   // --- KATALOG FILM ---
   {
     'title' : 'The Batman',
@@ -142,13 +142,13 @@ class  MainNavigation  extends StatefulWidget {
 
 class _MainNavigationState extends
 State<MainNavigation> {
-  String searchQuery = "";
+  String search = "";
 
 
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2, 
+      length: 3, 
       child: Scaffold(
         appBar: AppBar(
           title: const Text('CineBook 📚🎬', style: TextStyle(fontWeight: FontWeight.bold)),
@@ -166,8 +166,7 @@ State<MainNavigation> {
                     filled: true,
                     fillColor: Colors.white10,
                   ),
-                  onChanged: (v) => setState(() => 
-                  search = v.toLowerCase()),
+                  onChanged: (v) => setState(() => search = v.toLowerCase()),
                 ),
               ),
               const TabBar(
