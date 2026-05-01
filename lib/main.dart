@@ -93,6 +93,41 @@ const List<Map<String, String>> allData = [
     'category' : 'Movie',
     'rating' : '⭐⭐⭐⭐⭐'
   },
+  {
+    'title' : 'The Billions Dollar Code',
+    'image' : 'https://m.media-amazon.com/images/M/MV5BYzVmYWFkNDQtMWI1MC00ZWQyLTkzNzktZWQ0MTZkZTZhMTE0XkEyXkFqcGc@._V1_.jpg',
+    'desc' : 'Persaingan teknologi dan strategi di dunia bisnis digital',
+    'category' : 'Novie',
+    'rating' : '⭐⭐⭐⭐⭐',
+  },
+  {
+    'title' : '',
+    'image' : '',
+    'desc' : '',
+    'category' : 'Movie',
+    'rating' : '⭐⭐⭐⭐⭐',
+  },
+  {
+    'title' : '',
+    'image' : '',
+    'desc' : '',
+    'category' : 'Movie',
+    'rating' : '⭐⭐⭐⭐⭐',
+  },
+  {
+    'title' : '',
+    'image' : '',
+    'desc' : '',
+    'category' : 'Movie',
+    'rating' : '⭐⭐⭐⭐⭐',
+  },
+  {
+    'title' : '',
+    'image' : '',
+    'desc' : '',
+    'category' : 'Movie',
+    'rating' : '⭐⭐⭐⭐⭐',
+  },
 
   // --- KATALOG BUKU ---
   {
@@ -126,9 +161,44 @@ const List<Map<String, String>> allData = [
   {
     'title' : 'Rich Dad Poor Dad',
     'image' : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCdyugC3G12f24SfC6wxeQINZEdsMIHMmj_g&s',
-    'desc' : 'What tje rich teach their kids about money that the poor and niddle class do not!.',
+    'desc' : 'What the rich teach their kids about money that the poor and niddle class do not!.',
     'category' : 'Book',
     'rating' : '⭐⭐⭐⭐⭐'
+  },
+  {
+    'title' : 'Algorithms',
+    'image' : 'https://ocw.mit.edu/courses/6-046j-introduction-to-algorithms-sma-5503-fall-2005/f79f55df6aae6289ed44a7170e19acd0_6-046jf05.jpg',
+    'desc' : 'Materi fundamental tentang algoritma dan struktur data. Kunci utama untuk memecahkan masalah logika dan coding.',
+    'category' : 'Book',
+    'rating' : '⭐⭐⭐⭐⭐',
+  },
+  {
+    'title' : 'The Pragmatic Programmer',
+    'image' : 'https://down-id.img.susercontent.com/file/ef1cc2323a14fc21179b884f56fc0e68',
+    'desc' : 'Panduan menjadi pengembang software yang handal, mulai dari etika kerja hingga teknik coding yang efisien.',
+    'category' : 'Book',
+    'rating' : '⭐⭐⭐⭐⭐',
+  },
+  {
+    'title' : 'Mastering Python',
+    'image' : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrXvzfijI9usigxDv_Z_ekkS_TCFsWCZhVnycZLlBR0A&s',
+    'desc' : 'Materi tingkat tingkat tinggi untuk menguasai fitur-fitur canggih python, optimasi code, dan pengembangan sistem skala besar.',
+    'category' : 'Book',
+    'rating' : '⭐⭐⭐⭐⭐',
+  },
+  {
+    'title' : 'Filosofi Teras',
+    'image' : 'https://cdn-prd.tongkolspace.com/hipwee/wp-content/uploads/2024/05/hipwee-Filosofi-Teras-428x640.jpg',
+    'desc' : 'Buku populer yang mengajarkan ajaran Stoisisme untuk membantu kita tetap tenang, tangguh, dan bahagia dalam menghadapi masalah hidup sehari-hari.',
+    'category' : 'Book',
+    'rating' : '⭐⭐⭐⭐⭐',
+  },
+  {
+    'title' : 'Logika Algoritma',
+    'image' : 'https://bintangpusnas.perpusnas.go.id/api25/public/api/get-image/15376_prod_06f158a7899ea896d8cf2d0712a9bb05.png',
+    'desc' : 'Panduan dasar pemrograman yang membahas cara berpikir sistematis dan logika penyelesaian masalah melalui algoritma yang efisien dan terstruktur.',
+    'category' : 'Book',
+    'rating' : '⭐⭐⭐⭐⭐',
   },
 ];
 
