@@ -221,6 +221,7 @@ State<MainNavigation> {
       length: 3, 
       child: Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: const Text('CineBook 📚🎬', style: TextStyle(fontWeight: FontWeight.bold)),
           bottom : PreferredSize(
             preferredSize: const Size.fromHeight(110), 
