@@ -214,9 +214,29 @@ class _MainNavigationState extends
 State<MainNavigation> {
   String search = "";
 
+bool isLoading = true;
+
+@override
+void initState() {
+  super.initState();
+  Future.delayed(const Duration(milliseconds: 5000), () {
+    if (mounted) {
+      setState(() {
+        isLoading = false;
+      });
+    }
+  });
+}
 
   @override
   Widget build(BuildContext context) {
+    String sapaan() {
+      var jam = DateTime.now().hour;
+      if (jam < 7) return 'Selamat Pagi';
+      if (jam < 11) return 'Selamat Siang';
+      if (jam < 18) return 'Selamat Sore';
+      return 'Selamat Malam';
+    }
     return DefaultTabController(
       length: 3, 
       child: Scaffold(
@@ -259,7 +279,28 @@ State<MainNavigation> {
         ),
       ),
     ),
-        body: TabBarView(
+
+    body: isLoading
+      ? Container(
+        width: double.infinity,
+        color: Colors.black,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("${sapaan()}, Nita👋",
+            style: const TextStyle(
+              color: Colors.white, 
+              fontSize: 28, 
+              fontWeight: FontWeight.bold
+            ),
+            ),
+            const SizedBox(height: 20),
+            const CircularProgressIndicator(color: Colors.amber),
+          ],
+        ),
+      )
+      
+        : TabBarView(
           children: [
         
             ContentGrid(type: "Movie", query: search),
