@@ -222,14 +222,21 @@ State<MainNavigation> {
       child: Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: const Text('CineBook 📚🎬', style: TextStyle(fontWeight: FontWeight.bold)),
+          title: Padding(
+            padding: const EdgeInsets.only(top: 10),
+            child: const Text(
+              'CineBook 📚🎬', 
+          style: TextStyle(fontWeight: FontWeight.bold, letterSpacing: 1.2)
+            )
+          ),
           bottom : PreferredSize(
             preferredSize: const Size.fromHeight(110), 
             child: Column(
               children: [
-                Padding(padding: const EdgeInsets.symmetric
+                Padding(
+                  padding: const EdgeInsets.symmetric
                 (horizontal: 15),
-                child: TextField(
+                child: TextField( 
                   decoration: InputDecoration(
                     hintText: "Cari film atau buku...",
                     prefixIcon: const Icon(Icons.search),
@@ -244,7 +251,7 @@ State<MainNavigation> {
             tabs: [
               Tab(icon: Icon(Icons.movie), text: "Movies"),
               Tab(icon: Icon(Icons.book), text: "Books"),
-              Tab(icon: Icon(Icons.favorite), text: "Favs"),
+              Tab(icon: Icon(Icons.favorite, color: Colors.amber,), text: "Favs"),
               ],
             indicatorColor: Colors.amber,
             ),
