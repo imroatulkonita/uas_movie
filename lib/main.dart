@@ -283,22 +283,45 @@ void initState() {
     body: isLoading
       ? Container(
         width: double.infinity,
-        color: Colors.black,
+        height: double.infinity,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFF1F1F1F),
+              Colors.black,
+            ],
+          ),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const Icon(
+              Icons.movie_filter_rounded,
+              color: Colors.amber,
+              size: 80,
+            ),
+            const SizedBox(height: 30),
             Text("${sapaan()}, Nita👋",
             style: const TextStyle(
               color: Colors.white, 
-              fontSize: 28, 
-              fontWeight: FontWeight.bold
+              fontSize: 32, 
+              fontWeight: FontWeight.bold,
+              letterSpacing: 1.5,
+             ),
             ),
+            const SizedBox(height: 50),
+            const SizedBox(
+              width: 30,
+              height: 30,
+            child: CircularProgressIndicator(color: Colors.amber,
+            strokeWidth: 3,
             ),
-            const SizedBox(height: 20),
-            const CircularProgressIndicator(color: Colors.amber),
-          ],
-        ),
-      )
+          ),
+        ],
+      ),
+    )
       
         : TabBarView(
           children: [
@@ -434,5 +457,5 @@ class FavoriteScreen extends StatelessWidget {
         );
       },
     );
-  }
+  } 
 }
