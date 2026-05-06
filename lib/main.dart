@@ -237,17 +237,64 @@ void initState() {
       if (jam < 18) return 'Selamat Sore';
       return 'Selamat Malam';
     }
+
+    if (isLoading) {
+      return Scaffold(
+        backgroundColor: Colors.black,
+        body: Container(
+          width: double.infinity,
+          height: double.infinity,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Color(0xFF000000),
+                Color(0xFF4B0000),
+                Colors.black,
+              ],
+            ),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(Icons.play_circle_fill_rounded, 
+              color: Colors.amber, size: 100),
+              const SizedBox(height: 30),
+              Text(
+                "${sapaan()} Nita👋",
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 34,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: 2.0,
+                ),
+              ),
+              const SizedBox(height: 10),
+              const Text("Menyiapkan tontonan favoritmu....",
+              style: TextStyle(color: Colors.white70,
+              fontSize: 14)),
+              const SizedBox(height: 60),
+              const SizedBox(
+                width: 100,
+                child: LinearProgressIndicator(color: Colors.amber,
+                backgroundColor: Colors.white10),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
     return DefaultTabController(
       length: 3, 
       child: Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: Padding(
-            padding: const EdgeInsets.only(top: 10),
-            child: const Text(
+          title: const Padding(
+            padding:  EdgeInsets.only(top: 10),
+            child: Text(
               'CineBook 📚🎬', 
-          style: TextStyle(fontWeight: FontWeight.bold, letterSpacing: 1.2)
-            )
+          style: TextStyle(fontWeight: FontWeight.bold)),
           ),
           bottom : PreferredSize(
             preferredSize: const Size.fromHeight(110), 
@@ -280,50 +327,7 @@ void initState() {
       ),
     ),
 
-    body: isLoading
-      ? Container(
-        width: double.infinity,
-        height: double.infinity,
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Color(0xFF1F1F1F),
-              Colors.black,
-            ],
-          ),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Icon(
-              Icons.movie_filter_rounded,
-              color: Colors.amber,
-              size: 80,
-            ),
-            const SizedBox(height: 30),
-            Text("${sapaan()}, Nita👋",
-            style: const TextStyle(
-              color: Colors.white, 
-              fontSize: 32, 
-              fontWeight: FontWeight.bold,
-              letterSpacing: 1.5,
-             ),
-            ),
-            const SizedBox(height: 50),
-            const SizedBox(
-              width: 30,
-              height: 30,
-            child: CircularProgressIndicator(color: Colors.amber,
-            strokeWidth: 3,
-            ),
-          ),
-        ],
-      ),
-    )
-      
-        : TabBarView(
+      body : TabBarView(
           children: [
         
             ContentGrid(type: "Movie", query: search),
