@@ -258,9 +258,18 @@ void initState() {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
               const Icon(Icons.play_circle_fill_rounded, 
-              color: Colors.amber, size: 100),
-              const SizedBox(height: 30),
+              color: Colors.amber, size: 80),
+              const SizedBox(width: 20),
+              const Icon(Icons.menu_book_rounded, 
+              color: Colors.amber, size: 80),
+                ],
+          ),
+              const SizedBox(height: 40),
+
               Text(
                 "${sapaan()} Nita👋",
                 style: const TextStyle(
@@ -270,8 +279,9 @@ void initState() {
                   letterSpacing: 2.0,
                 ),
               ),
-              const SizedBox(height: 10),
-              const Text("Menyiapkan tontonan favoritmu....",
+              const SizedBox(height: 15),
+              const Text(
+                "Menyiapkan film dan buku favoritmu....",
               style: TextStyle(color: Colors.white70,
               fontSize: 14)),
               const SizedBox(height: 60),
