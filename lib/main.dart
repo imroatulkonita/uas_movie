@@ -448,20 +448,42 @@ class DetailPage extends StatelessWidget {
                       onPressed: () {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
-                            content: Center(
-                              child: Text(
-                              item['category'] == 'Movie'
-                              ? 'Memutar film...'
-                              : 'Membuka buku...'
-                              ),
-                            ),
                             behavior: SnackBarBehavior.floating,
-                            backgroundColor: Colors.amber,
+                            backgroundColor: const Color(0xFF1E1E1E),
+                            elevation: 10,
+                            margin: const EdgeInsets.symmetric(
+                              horizontal: 40,
+                              vertical: 20,
+                            ),
                             duration: const Duration(seconds: 2),
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15),
-                             ),
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+
+                            content: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                              item['category'] == 'Movie'
+                              ? Icons.play_circle_fill
+                              : Icons.menu_book,
+                              color: Colors.amber
+                              ),
+
+                              const SizedBox(width: 10),
+
+                              Text(
+                                item['category'] == 'Movie'
+                                ? 'Memutar Film...'
+                                : 'Membuka Buku...',
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
                            ),
+                          ),
                         );
                       },
                       icon: Icon(
