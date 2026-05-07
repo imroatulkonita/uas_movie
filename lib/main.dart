@@ -446,7 +446,23 @@ class DetailPage extends StatelessWidget {
                     height: 50,
                     child: ElevatedButton.icon(
                       onPressed: () {
-                        debugPrint("Memutar konten...");
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Center(
+                              child: Text(
+                              item['category'] == 'Movie'
+                              ? 'Memutar film...'
+                              : 'Membuka buku...'
+                              ),
+                            ),
+                            behavior: SnackBarBehavior.floating,
+                            backgroundColor: Colors.amber,
+                            duration: const Duration(seconds: 2),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                             ),
+                           ),
+                        );
                       },
                       icon: Icon(
                         item['category'] == 'Movie' ? Icons.play_arrow : Icons.menu_book,
