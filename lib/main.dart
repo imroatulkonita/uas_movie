@@ -423,7 +423,9 @@ class DetailPage extends StatelessWidget {
           )
         ],
       ),
-      body: Column(
+      body: SafeArea(
+        child: SingleChildScrollView(
+      child: Column(
           children: [
             Image.network(item['image']!, height: 350, width: double.infinity, fit: BoxFit.cover),
             Padding(
@@ -438,11 +440,60 @@ class DetailPage extends StatelessWidget {
                   const Text("Description:", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
                   const SizedBox(height: 8),
                   Text(item['desc']!, style: const TextStyle(fontSize: 16, height: 1.5)),
-                ],
+                  const SizedBox(height: 30),
+                  SizedBox(
+                    width: double.infinity,
+                    height: 50,
+                    child: ElevatedButton.icon(
+                      onPressed: () {
+                        debugPrint("Memutar konten...");
+                      },
+                      icon: Icon(
+                        item['category'] == 'Movie' ? Icons.play_arrow : Icons.menu_book,
+                        color: Colors.black,
+                      ),
+                      label: Text(
+                        item['category'] == 'Movie' ? "Putar Film" : "Mulai Membaca",
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                          ),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.amber,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                      ),
+                    ),
+
+                    const SizedBox(height: 12),
+                    SizedBox(
+                      width: double.infinity,
+                      height: 50,
+                      child: OutlinedButton.icon(
+                        onPressed: () {},
+                        icon: const Icon(Icons.add, color: Colors.white),
+                        label: const Text("Tambah ke Favorite", 
+                        style: TextStyle(
+                          color: Colors.white)),
+                          style: OutlinedButton.styleFrom(
+                            side: const BorderSide(color: Colors.white30),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
+                        ),
+                      ),
+                  ],
+                ),
               ),
-            )
-          ],
+            ],
+          ),
         ),
+      ),
     );
   }
 }
