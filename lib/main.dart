@@ -12,7 +12,7 @@ class FavoriteProvider extends ChangeNotifier {
   void _loadFromPrefs() async {
     final prefs = await SharedPreferences.getInstance();
     _favTitles = prefs.getStringList('cinebook_favs') ?? [];
-    notifyListeners();
+    notifyListeners(); 
   }
 
 void toggleFavorite(String title) async {
@@ -63,35 +63,35 @@ const List<Map<String, String>> allData = [
     'image' : 'https://m.media-amazon.com/images/I/81PWWFp26HL.jpg',
     'desc' : 'Batman venture inti Gotham City\'s underworld when a sadistic killer leaves behind cryptic clues.',
     'category' : 'Movie',
-    'rating' : '⭐⭐⭐⭐⭐'
+    'rating' : '⭐⭐⭐⭐⭐',
   },
   {
     'title' : 'Dune: Part Two',
     'image' : 'https://www.joblo.com/wp-content/uploads/2023/08/dune_part_two_empire_cover-791x1024.jpg',
     'desc' : 'Paul atreides unites with Chani and the Fremen while on a warpath of revenge.',
     'category' : 'Movie',
-    'rating' : '⭐⭐⭐⭐⭐'
+    'rating' : '⭐⭐⭐⭐⭐',
   },
   {
     'title' : 'Oppenheimer',
     'image' : 'https://www.tallengestore.com/cdn/shop/products/Oppenheimer-CillianMurphy-ChristopherNolan-HollywoodMoviePoster.jpg?v=1691369029',
     'desc' : 'Robert Oppenheimer and is role in the development of the atomic bomb.',
     'category' : 'Movie',
-    'rating' : '⭐⭐⭐⭐⭐'
+    'rating' : '⭐⭐⭐⭐⭐',
   },
   {
     'title' : 'Ayah, Ini Arahnya Kemana, ya?',
     'image' : 'https://m.media-amazon.com/images/M/MV5BMWY2MGIxMjctMWVkMy00NmNkLWI1ZjktMDM2YmI5ZmFmOWQ1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
     'desc' : 'Sebuah perjalanan emosional seorang anak yang mencari jawaban dan arah hidup melalui kenangan serta sosok ayahnya.',
     'category' : 'Movie',
-    'rating' : '⭐⭐⭐⭐⭐'
+    'rating' : '⭐⭐⭐⭐⭐',
   },
   {
     'title' : 'Tunggu Aku Sukses Nanti',
     'image' : 'https://pbs.twimg.com/media/G9anVVJaYAMX4wV.jpg',
     'desc' : 'Perjuangan anak muda dalam meraih mimpi dan cinta, membuktikan bahwa sukses butuh proses dan kesabaran.',
     'category' : 'Movie',
-    'rating' : '⭐⭐⭐⭐⭐'
+    'rating' : '⭐⭐⭐⭐⭐',
   },
   {
     'title' : 'Alas Roban',
@@ -135,35 +135,35 @@ const List<Map<String, String>> allData = [
     'image' : 'https://m.media-amazon.com/images/I/81YkqyaFVEL._AC_UF1000,1000_QL80_.jpg',
     'desc' : 'An easy & proven way to build goog habits and break bad ones.',
     'category' : 'Book',
-    'rating' : '⭐⭐⭐⭐⭐'
+    'rating' : '⭐⭐⭐⭐⭐',
   },
   {
     'title' : 'harry potter',
     'image' : 'https://m.media-amazon.com/images/I/71-++hbbERL.jpg',
     'desc' : 'A young wizard discovers his magical heritage on his eleventh birthday.',
     'category' : 'Book',
-    'rating' : '⭐⭐⭐⭐⭐'
+    'rating' : '⭐⭐⭐⭐⭐',
   },
   {
     'title' : 'The Midnight Library',
     'image' : 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1609973366i/56578056.jpg',
     'desc' : 'Di antara hidup dan mati ada sebuah perpustakaan yang berisi semua kemungkinan hidup yang bisa kita jalani.',
     'category' : 'Book',
-    'rating' : '⭐⭐⭐⭐⭐'
+    'rating' : '⭐⭐⭐⭐⭐',
   },
   {
     'title' : 'The Alchemist',
     'image' : 'https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1442866592i/9276509.jpg',
     'desc' : 'Perjalanan seorang pemuda mengejar mimpinya ke piramida mesir.',
     'category' : 'Book',
-    'rating' : '⭐⭐⭐⭐⭐'
+    'rating' : '⭐⭐⭐⭐⭐',
   },
   {
     'title' : 'Rich Dad Poor Dad',
     'image' : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCdyugC3G12f24SfC6wxeQINZEdsMIHMmj_g&s',
     'desc' : 'What the rich teach their kids about money that the poor and niddle class do not!.',
     'category' : 'Book',
-    'rating' : '⭐⭐⭐⭐⭐'
+    'rating' : '⭐⭐⭐⭐⭐',
   },
   {
     'title' : 'Algorithms',
