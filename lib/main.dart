@@ -281,7 +281,7 @@ void initState() {
               ),
               const SizedBox(height: 15),
               const Text(
-                "Menyiapkan film dan buku favoritmu....",
+                "Menyiapkan katalog film dan buku favoritmu....",
               style: TextStyle(color: Colors.white70,
               fontSize: 14)),
               const SizedBox(height: 60),
