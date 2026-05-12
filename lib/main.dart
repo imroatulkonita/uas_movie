@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 // --- STATE MANAGEMENT (PROVIDER) ---
 class FavoriteProvider extends ChangeNotifier {
@@ -64,6 +65,7 @@ const List<Map<String, String>> allData = [
     'desc' : 'Batman venture inti Gotham City\'s underworld when a sadistic killer leaves behind cryptic clues.',
     'category' : 'Movie',
     'rating' : '⭐⭐⭐⭐⭐',
+    'link' : 'https://youtu.be/mqqft2x_Aa4?si=Wr9UO8qEn7DFj9vk',
   },
   {
     'title' : 'Dune: Part Two',
@@ -445,46 +447,20 @@ class DetailPage extends StatelessWidget {
                     width: double.infinity,
                     height: 50,
                     child: ElevatedButton.icon(
-                      onPressed: () {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            behavior: SnackBarBehavior.floating,
-                            backgroundColor: const Color(0xFF1E1E1E),
-                            elevation: 10,
-                            margin: const EdgeInsets.symmetric(
-                              horizontal: 40,
-                              vertical: 20,
-                            ),
-                            duration: const Duration(seconds: 2),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
-                            ),
+                      onPressed: () async {
+                       final String? urlString = item['link'];
 
-                            content: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(
-                              item['category'] == 'Movie'
-                              ? Icons.play_circle_fill
-                              : Icons.menu_book,
-                              color: Colors.amber
-                              ),
+                       if (urlString != null && urlString.isNotEmpty) {
+                        final Uri url = Uri.parse(urlString);
 
-                              const SizedBox(width: 10),
-
-                              Text(
-                                item['category'] == 'Movie'
-                                ? 'Memutar Film...'
-                                : 'Membuka Buku...',
-                                style: const TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
-                           ),
-                          ),
+                        if (!await launchUrl(url, mode: 
+                        LaunchMode.externalApplication)) {
+                          debugPrint("Gagal membuka link");
+                        }
+                       } else {
+                        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('waduh, linknya belum di isi di allData')),
                         );
+                       }
                       },
                       icon: Icon(
                         item['category'] == 'Movie' ? Icons.play_arrow : Icons.menu_book,
