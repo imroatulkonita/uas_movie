@@ -73,6 +73,7 @@ const List<Map<String, String>> allData = [
     'desc' : 'Paul atreides unites with Chani and the Fremen while on a warpath of revenge.',
     'category' : 'Movie',
     'rating' : '⭐⭐⭐⭐⭐',
+    'link' : 'https://youtu.be/Way9Dexny3w?si=23lp0_wTSOTx2zm4',
   },
   {
     'title' : 'Oppenheimer',
@@ -80,6 +81,7 @@ const List<Map<String, String>> allData = [
     'desc' : 'Robert Oppenheimer and is role in the development of the atomic bomb.',
     'category' : 'Movie',
     'rating' : '⭐⭐⭐⭐⭐',
+    'link' : 'https://youtu.be/uYPbbksJxIg?si=5atmYLBjmUXZV9Xk',
   },
   {
     'title' : 'Ayah, Ini Arahnya Kemana, ya?',
@@ -87,6 +89,7 @@ const List<Map<String, String>> allData = [
     'desc' : 'Sebuah perjalanan emosional seorang anak yang mencari jawaban dan arah hidup melalui kenangan serta sosok ayahnya.',
     'category' : 'Movie',
     'rating' : '⭐⭐⭐⭐⭐',
+    'link' : 'https://youtu.be/Cr9EOETsDuU?si=Vvqo-Kyec3zmSZkO',
   },
   {
     'title' : 'Tunggu Aku Sukses Nanti',
@@ -94,6 +97,7 @@ const List<Map<String, String>> allData = [
     'desc' : 'Perjuangan anak muda dalam meraih mimpi dan cinta, membuktikan bahwa sukses butuh proses dan kesabaran.',
     'category' : 'Movie',
     'rating' : '⭐⭐⭐⭐⭐',
+    'link' : 'https://youtu.be/Ga4rG82wC10?si=6Jqmol_OCMwzpyha',
   },
   {
     'title' : 'Alas Roban',
@@ -101,6 +105,7 @@ const List<Map<String, String>> allData = [
     'desc' : 'Mengambil latar di salah satu jalur paling angker di jawa tengah, film ini mengisahkan teror yang dialami sebuah keluarga saat terjebak di tengah hutn Alas Roban yang legendaris.',
     'category' : 'Movie',
     'rating' : '⭐⭐⭐⭐⭐',
+    'link' : 'https://youtu.be/b23r0XvWW_Q?si=gbElhJMvQJutByrZ',
   },
   {
     'title' : 'Kuyang',
@@ -108,6 +113,7 @@ const List<Map<String, String>> allData = [
     'desc' : 'Mengangkat legenda urban kalimantan tentang teror makhluk gaib berkepala tanpa tubuh. Sebuah kisah horor mencekam tentang perjuangan melawan kutukan kuno.',
     'category' : 'Movie',
     'rating' : '⭐⭐⭐⭐⭐',
+    'link' : 'https://youtu.be/z3ElDl-IWmc?si=dT1bm_QeKovKbt-y',
   },
   {
     'title' : 'Perjalanan Pertama',
@@ -115,6 +121,7 @@ const List<Map<String, String>> allData = [
     'desc' : 'Sebuah film yang emosional antara seorang kakek dan cucunya. Di sepanjang jalan, mereka menemukan rahasia masa lalu dan belajar tentang arti keluarga serta kedewasaan serta kedewasaan melalui peristiwa-peristiwa tak terduga.',
     'category' : 'Movie',
     'rating' : '⭐⭐⭐⭐⭐',
+    'link' : 'https://youtu.be/LzPgIL8Ec4M?si=GiUHdtm80NbLyS0L',
   },
   {
     'title' : 'Satria Dewa: Gatotkaca',
@@ -122,6 +129,7 @@ const List<Map<String, String>> allData = [
     'desc' : 'Mengisahkan tentang pemuda yang menyadari bahwa ia memiliki garis keturunan pahlawan legendaris dan harus berjuang melindungi dunia dari ancaman kekuatan jahat  masa lalu.',
     'category' : 'Movie',
     'rating' : '⭐⭐⭐⭐⭐',
+    'link' : 'https://youtu.be/R7SjBDyaWJk?si=RBcHPmVSs5dZb28U',
   },
   {
     'title' : 'Senin Harga Naik',
@@ -129,6 +137,7 @@ const List<Map<String, String>> allData = [
     'desc' : 'Film yang memotret realita kehidupan sosial dan ekonomi masyarakat dengan sentuhan darama yang kuat.',
     'category' : 'Movie',
     'rating' : '⭐⭐⭐⭐⭐',
+    'link' : 'https://youtu.be/_OtkOB3QA64?si=c5bsqwlI7GSPsVyF',
   },
 
   // --- KATALOG BUKU ---
@@ -138,13 +147,15 @@ const List<Map<String, String>> allData = [
     'desc' : 'An easy & proven way to build goog habits and break bad ones.',
     'category' : 'Book',
     'rating' : '⭐⭐⭐⭐⭐',
+    'link' : 'https://www.google.co.id/books/edition/Atomic_Habits_Perubahan_Kecil_yang_membe/1bm0DwAAQBAJ?hl=id&gbpv=1&dq=atomic+habits&pg=PA33&printsec=frontcover',
   },
   {
-    'title' : 'harry potter',
-    'image' : 'https://m.media-amazon.com/images/I/71-++hbbERL.jpg',
+    'title' : 'Dikta & Hukum',
+    'image' : 'https://www.gramedia.com/blog/content/images/2025/01/Dikta---Hukum.png',
     'desc' : 'A young wizard discovers his magical heritage on his eleventh birthday.',
     'category' : 'Book',
     'rating' : '⭐⭐⭐⭐⭐',
+    'link' : '',
   },
   {
     'title' : 'The Midnight Library',
@@ -152,6 +163,7 @@ const List<Map<String, String>> allData = [
     'desc' : 'Di antara hidup dan mati ada sebuah perpustakaan yang berisi semua kemungkinan hidup yang bisa kita jalani.',
     'category' : 'Book',
     'rating' : '⭐⭐⭐⭐⭐',
+    'link' : '',
   },
   {
     'title' : 'The Alchemist',
@@ -159,13 +171,15 @@ const List<Map<String, String>> allData = [
     'desc' : 'Perjalanan seorang pemuda mengejar mimpinya ke piramida mesir.',
     'category' : 'Book',
     'rating' : '⭐⭐⭐⭐⭐',
+    'link' : '',
   },
   {
-    'title' : 'Rich Dad Poor Dad',
-    'image' : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCdyugC3G12f24SfC6wxeQINZEdsMIHMmj_g&s',
-    'desc' : 'What the rich teach their kids about money that the poor and niddle class do not!.',
+    'title' : 'Rich Dad Poor Dad For Teens',
+    'image' : 'https://img.lazcdn.com/g/p/a99d4bb9aca800456318e1eb61779685.jpg_720x720q80.jpg',
+    'desc' : 'Cara seru belajar rahasia keuangan dan membuat uang bekerja untukmu sejak remaja. Solusi cerdas untuk jadi mandiri finansial lebih dini.',
     'category' : 'Book',
     'rating' : '⭐⭐⭐⭐⭐',
+    'link' : 'https://www.google.co.id/books/edition/Rich_Dad_Poor_Dad_for_Teens/eX8u0gAScT4C?hl=id&gbpv=1&dq=buku+rich+dad+poor+dad&pg=PR20&printsec=frontcover',
   },
   {
     'title' : 'Algorithms',
@@ -173,6 +187,7 @@ const List<Map<String, String>> allData = [
     'desc' : 'Materi fundamental tentang algoritma dan struktur data. Kunci utama untuk memecahkan masalah logika dan coding.',
     'category' : 'Book',
     'rating' : '⭐⭐⭐⭐⭐',
+    'link' : '',
   },
   {
     'title' : 'The Pragmatic Programmer',
@@ -180,6 +195,7 @@ const List<Map<String, String>> allData = [
     'desc' : 'Panduan menjadi pengembang software yang handal, mulai dari etika kerja hingga teknik coding yang efisien.',
     'category' : 'Book',
     'rating' : '⭐⭐⭐⭐⭐',
+    'link' : '',
   },
   {
     'title' : 'Mastering Python',
@@ -187,6 +203,7 @@ const List<Map<String, String>> allData = [
     'desc' : 'Materi tingkat tingkat tinggi untuk menguasai fitur-fitur canggih python, optimasi code, dan pengembangan sistem skala besar.',
     'category' : 'Book',
     'rating' : '⭐⭐⭐⭐⭐',
+    'link' : '',
   },
   {
     'title' : 'Filosofi Teras',
@@ -194,13 +211,15 @@ const List<Map<String, String>> allData = [
     'desc' : 'Buku populer yang mengajarkan ajaran Stoisisme untuk membantu kita tetap tenang, tangguh, dan bahagia dalam menghadapi masalah hidup sehari-hari.',
     'category' : 'Book',
     'rating' : '⭐⭐⭐⭐⭐',
+    'link' : '',
   },
   {
-    'title' : 'Logika Algoritma',
-    'image' : 'https://bintangpusnas.perpusnas.go.id/api25/public/api/get-image/15376_prod_06f158a7899ea896d8cf2d0712a9bb05.png',
-    'desc' : 'Panduan dasar pemrograman yang membahas cara berpikir sistematis dan logika penyelesaian masalah melalui algoritma yang efisien dan terstruktur.',
+    'title' : 'Pendekar Nagasura',
+    'image' : 'https://p19-novel-sg.ibyteimg.com/img/novel-images-sg/a32b4cca26dc5eeff4ecd64ed4f8fb0d~tplv-resize:570:810.jpg',
+    'desc' : 'Pangeran Mahaganendra diusir dari istana karena ketahuan membuat keributan di sebuah rumah hiburan. Perbuatannya yang tidak terpuji itu telah mencoreng nama baik istana dan membuat ayahnya, sang prabu Mahabisana murka.',
     'category' : 'Book',
     'rating' : '⭐⭐⭐⭐⭐',
+    'link' : 'https://www.fizzo.org/page/share/?bid=7799140951619796222&isNew=1&from=copy_link&group=2&d=7568641207748507385&u=7607649645386790127&language=id&region=ID',
   },
 ];
 
@@ -234,9 +253,9 @@ void initState() {
   Widget build(BuildContext context) {
     String sapaan() {
       var jam = DateTime.now().hour;
-      if (jam < 7) return 'Selamat Pagi';
-      if (jam < 11) return 'Selamat Siang';
-      if (jam < 18) return 'Selamat Sore';
+      if (jam < 11) return 'Selamat Pagi';
+      if (jam < 15) return 'Selamat Siang';
+      if (jam < 19) return 'Selamat Sore';
       return 'Selamat Malam';
     }
 
@@ -273,7 +292,7 @@ void initState() {
               const SizedBox(height: 40),
 
               Text(
-                "${sapaan()} Nita👋",
+                "${sapaan()} Mau Eksplor Apa Hari Ini?👋",
                 style: const TextStyle(
                   color: Colors.white,
                   fontSize: 34,
