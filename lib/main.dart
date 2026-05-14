@@ -292,7 +292,7 @@ void initState() {
               const SizedBox(height: 40),
 
               Text(
-                "${sapaan()} Cari Film atau Buku?👋",
+                "${sapaan()}, semuanya👋",
                 style: const TextStyle(
                   color: Colors.white,
                   fontSize: 34,
